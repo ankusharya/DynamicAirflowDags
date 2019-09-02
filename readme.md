@@ -1,7 +1,7 @@
 ### DynamicAirflowDags
 This repository generates dynamic dags based on given json file.
 
-##Prerequisites
+## Prerequisites
 Apache Airflow
 ### Supported Operators
 1. Bash Operator
