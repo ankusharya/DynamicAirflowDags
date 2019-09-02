@@ -1,0 +1,98 @@
+[
+  {
+    "dag_id": "dynamic_trigger_test",
+    "pre_validation": [
+      {
+        "operator": "bash",
+        "task_id": "first_task",
+        "command": "echo 'This is first task'",
+        "dependency": "sequential"
+      },
+      {
+        "operator": "bash",
+        "task_id": "second_task",
+        "command": "echo 'This is second task'",
+        "dependency": "sequential"
+      }
+    ],
+    "post_validation": [
+      {
+        "operator": "bash",
+        "task_id": "first_task",
+        "command": "echo 'This is first task'",
+        "dependency": "sequential"
+      },
+      {
+        "operator": "bash",
+        "task_id": "second_task",
+        "command": "echo 'This is second task'",
+        "dependency": "sequential"
+      }
+    ],
+    "execution": [
+      {
+        "operator": "bash",
+        "task_id": "first_task",
+        "command": "echo 'This is first task'",
+        "dependency": "sequential"
+      },
+      {
+        "operator": "bash",
+        "task_id": "second_task",
+        "command": "echo 'This is second task'",
+        "dependency": "sequential"
+      }
+    ]
+  },
+  {
+    "dag_id": "airflow_dynamic_trigger",
+    "pre_validation": [
+      {
+        "operator": "bash",
+        "task_id": "first_task",
+        "command": "echo 'This is first task'",
+        "dependency": "sequential",
+        "load_from_app_config": "true"
+      },
+      {
+        "operator": "bash",
+        "task_id": "second_task",
+        "command": "echo 'This is second task'",
+        "dependency": "sequential",
+        "load_from_app_config": "true"
+      }
+    ],
+    "post_validation": [
+      {
+        "operator": "bash",
+        "task_id": "first_task",
+        "command": "echo 'This is first task'",
+        "dependency": "sequential",
+        "load_from_app_config": "true"
+      },
+      {
+        "operator": "bash",
+        "task_id": "second_task",
+        "command": "echo 'This is second task'",
+        "dependency": "sequential",
+        "load_from_app_config": "true"
+      }
+    ],
+    "execution": [
+      {
+        "operator": "bash",
+        "task_id": "first_task",
+        "command": "echo 'This is first task'",
+        "dependency": "sequential",
+        "load_from_app_config": "true"
+      },
+      {
+        "operator": "bash",
+        "task_id": "second_task",
+        "command": "echo 'This is second task'",
+        "dependency": "sequential",
+        "load_from_app_config": "true"
+      }
+    ]
+  }
+]

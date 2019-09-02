@@ -1,0 +1,10 @@
+.idea
+.pytest_cache
+*.iml
+.cache
+.local
+.python_history
+*__pycache__*
+logs
+
+
